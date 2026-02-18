@@ -1,0 +1,952 @@
+W0218 18:34:54.683000 3787099 torch/distributed/run.py:774] 
+W0218 18:34:54.683000 3787099 torch/distributed/run.py:774] *****************************************
+W0218 18:34:54.683000 3787099 torch/distributed/run.py:774] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0218 18:34:54.683000 3787099 torch/distributed/run.py:774] *****************************************
+[2026-02-18 18:35:00,103] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:35:00,157] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:35:00,289] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:35:00,366] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:35:00,376] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:35:00,377] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:35:00,380] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:35:00,387] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:35:01,037] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:35:01,089] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:35:01,159] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:35:01,275] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:35:01,297] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:35:01,310] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:35:01,332] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:35:01,332] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2026-02-18 18:35:01,333] [INFO] [comm.py:652:init_distributed] cdb=None
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+[2026-02-18 18:35:02,593] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:35:02,637] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:02,645] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:35:02,675] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:35:02,683] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:02,684] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:35:02,695] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:35:02,732] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:35:07,131] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 825, num_elems = 4.07B
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.81s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.81s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.81s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.80s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.80s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.80s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.80s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.61s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.60s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.60s/it]
+
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.60s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.60s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.60s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.60s/it]
+[2026-02-18 18:35:18,521] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.68s/it]
+[2026-02-18 18:35:18,528] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:18,538] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:18,547] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:18,574] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:18,581] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:18,593] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:18,690] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:22,395] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 1650, num_elems = 8.13B
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.88s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.88s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.88s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.88s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.88s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.88s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.87s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.09s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.83s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.83s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.83s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.82s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.83s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.83s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.83s/it]
+
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.69s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.90s/it]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+[2026-02-18 18:35:35,284] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:35,390] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:35,403] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:35,469] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:35,474] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2026-02-18 18:35:35,474] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:35,487] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2026-02-18 18:35:35,519] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:35,562] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:35:35,608] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[1/3] c++ -MMD -MF cpu_adam.o.d -DTORCH_EXTENSION_NAME=cpu_adam -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1018\" -I/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/ops/csrc/includes -isystem /data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/include -isystem /data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -isystem /home/meilong/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/include/python3.11 -fPIC -std=c++17 -O3 -std=c++17 -g -Wno-reorder -L/usr/local/cuda-12.8/lib64 -lcudart -lcublas -g -march=native -fopenmp -D__AVX512__ -D__ENABLE_CUDA__ -DBF16_AVAILABLE -c /data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/ops/csrc/adam/cpu_adam.cpp -o cpu_adam.o 
+[2/3] c++ -MMD -MF cpu_adam_impl.o.d -DTORCH_EXTENSION_NAME=cpu_adam -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1018\" -I/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/ops/csrc/includes -isystem /data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/include -isystem /data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -isystem /home/meilong/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/include/python3.11 -fPIC -std=c++17 -O3 -std=c++17 -g -Wno-reorder -L/usr/local/cuda-12.8/lib64 -lcudart -lcublas -g -march=native -fopenmp -D__AVX512__ -D__ENABLE_CUDA__ -DBF16_AVAILABLE -c /data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/ops/csrc/adam/cpu_adam_impl.cpp -o cpu_adam_impl.o 
+[3/3] c++ cpu_adam.o cpu_adam_impl.o -shared -lcurand -L/usr/local/cuda-12.8/lib64 -L/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/lib -lc10 -ltorch_cpu -ltorch -ltorch_python -o cpu_adam.so
+Time to load cpu_adam op: 21.65522027015686 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+Time to load cpu_adam op: 21.368687868118286 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+Time to load cpu_adam op: 21.479578495025635 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+[2026-02-18 18:35:57,295] [INFO] [logging.py:128:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adamw as basic optimizer
+[2026-02-18 18:35:57,295] [INFO] [logging.py:128:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+Time to load cpu_adam op: 21.53275489807129 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+Time to load cpu_adam op: 21.352792024612427 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+Time to load cpu_adam op: 21.457422733306885 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+Time to load cpu_adam op: 21.673811435699463 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+[2026-02-18 18:35:57,384] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+[2026-02-18 18:35:57,384] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+[2026-02-18 18:35:57,384] [INFO] [logging.py:128:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2026-02-18 18:35:57,384] [INFO] [logging.py:128:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+Time to load cpu_adam op: 21.56140160560608 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-02-18 18:35:57,712] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2026-02-18 18:35:57,712] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 1.74 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:35:57,712] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 87.62 GB, percent = 5.8%
+[2026-02-18 18:35:57,714] [INFO] [stage3.py:166:__init__] Reduce bucket size 500000000
+[2026-02-18 18:35:57,714] [INFO] [stage3.py:167:__init__] Prefetch bucket size 50000000
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-02-18 18:35:57,918] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2026-02-18 18:35:57,919] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:35:57,919] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 87.62 GB, percent = 5.8%
+Parameter Offload: Total persistent parameters: 755712 in 408 params
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-02-18 18:35:58,151] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2026-02-18 18:35:58,152] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:35:58,152] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 87.63 GB, percent = 5.8%
+[2026-02-18 18:35:58,361] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2026-02-18 18:35:58,362] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:35:58,362] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 87.62 GB, percent = 5.8%
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-02-18 18:35:59,431] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 1
+[2026-02-18 18:35:59,431] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:35:59,432] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 99.84 GB, percent = 6.6%
+[2026-02-18 18:35:59,669] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2026-02-18 18:35:59,669] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:35:59,669] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 104.01 GB, percent = 6.9%
+[2026-02-18 18:36:00,951] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2026-02-18 18:36:00,951] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:36:00,951] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 109.81 GB, percent = 7.3%
+[2026-02-18 18:36:01,168] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2026-02-18 18:36:01,168] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:36:01,168] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 113.99 GB, percent = 7.5%
+[2026-02-18 18:36:04,095] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2026-02-18 18:36:04,095] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:36:04,095] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 126.09 GB, percent = 8.3%
+[2026-02-18 18:36:04,096] [INFO] [stage3.py:521:_setup_for_real_optimizer] optimizer state initialized
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+[2026-02-18 18:36:13,050] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2026-02-18 18:36:13,051] [INFO] [utils.py:782:see_memory_usage] MA 0.93 GB         Max_MA 2.09 GB         CA 2.51 GB         Max_CA 3 GB 
+[2026-02-18 18:36:13,051] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 136.27 GB, percent = 9.0%
+[2026-02-18 18:36:13,051] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2026-02-18 18:36:13,051] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = None
+[2026-02-18 18:36:13,051] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2026-02-18 18:36:13,051] [INFO] [logging.py:128:log_dist] [Rank 0] step=0, skipped=0, lr=[1e-06], mom=[[0.9, 0.999]]
+[2026-02-18 18:36:13,053] [INFO] [config.py:999:print] DeepSpeedEngine configuration:
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   amp_enabled .................. False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   amp_params ................... False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   bfloat16_enabled ............. True
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   bfloat16_immediate_grad_update  False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   checkpoint_parallel_write_pipeline  False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   checkpoint_tag_validation_enabled  True
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   checkpoint_tag_validation_fail  False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f7cdc0fa850>
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   communication_data_type ...... None
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   curriculum_enabled_legacy .... False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   curriculum_params_legacy ..... False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   data_efficiency_enabled ...... False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   dataloader_drop_last ......... False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   disable_allgather ............ False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   dump_state ................... False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   dynamic_loss_scale_args ...... None
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   eigenvalue_enabled ........... False
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   eigenvalue_gas_boundary_resolution  1
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   eigenvalue_layer_num ......... 0
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   eigenvalue_max_iter .......... 100
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   eigenvalue_stability ......... 1e-06
+[2026-02-18 18:36:13,053] [INFO] [config.py:1003:print]   eigenvalue_tol ............... 0.01
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   eigenvalue_verbose ........... False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   elasticity_enabled ........... False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   fp16_auto_cast ............... None
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   fp16_enabled ................. False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   fp16_master_weights_and_gradients  False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   global_rank .................. 0
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   grad_accum_dtype ............. None
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   gradient_accumulation_steps .. 1
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   gradient_clipping ............ 1.0
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   gradient_predivide_factor .... 1.0
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   graph_harvesting ............. False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   initial_dynamic_scale ........ 1
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   load_universal_checkpoint .... False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   loss_scale ................... 1.0
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   memory_breakdown ............. False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   mics_hierarchial_params_gather  False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   mics_shard_size .............. -1
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   optimizer_legacy_fusion ...... False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   optimizer_name ............... adamw
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   optimizer_params ............. {'lr': 1e-06, 'betas': [0.9, 0.999], 'eps': 1e-08, 'weight_decay': 0.1}
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   pld_enabled .................. False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   pld_params ................... False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   prescale_gradients ........... False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   scheduler_name ............... None
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   scheduler_params ............. None
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   seq_parallel_communication_data_type  torch.float32
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   sparse_attention ............. None
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   sparse_gradients_enabled ..... False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   steps_per_print .............. inf
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   timers_config ................ enabled=True synchronized=True
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   train_batch_size ............. 8
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   train_micro_batch_size_per_gpu  1
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   use_data_before_expert_parallel_  False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   use_node_local_storage ....... False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   wall_clock_breakdown ......... False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   weight_quantization_config ... None
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   world_size ................... 8
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   zero_allow_untested_optimizer  False
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='cpu', nvme_path=None, buffer_count=5, buffer_size=100000000, max_in_cpu=1000000000, pin_memory=True) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='cpu', nvme_path=None, buffer_count=4, pin_memory=True, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1000000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50000000 param_persistence_threshold=100000 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=True use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   zero_enabled ................. True
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   zero_force_ds_cpu_optimizer .. True
+[2026-02-18 18:36:13,054] [INFO] [config.py:1003:print]   zero_optimization_stage ...... 3
+[2026-02-18 18:36:13,054] [INFO] [config.py:989:print_user_config]   json = {
+    "fp16": {
+        "enabled": false, 
+        "loss_scale": 0, 
+        "loss_scale_window": 1000, 
+        "initial_scale_power": 16, 
+        "hysteresis": 2, 
+        "min_loss_scale": 1
+    }, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "optimizer": {
+        "type": "AdamW", 
+        "params": {
+            "lr": 1e-06, 
+            "betas": [0.9, 0.999], 
+            "eps": 1e-08, 
+            "weight_decay": 0.1
+        }
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "cpu", 
+            "pin_memory": true
+        }, 
+        "offload_param": {
+            "device": "cpu", 
+            "pin_memory": true
+        }, 
+        "overlap_comm": true, 
+        "contiguous_gradients": true, 
+        "sub_group_size": 1.000000e+09, 
+        "reduce_bucket_size": "auto", 
+        "stage3_prefetch_bucket_size": "auto", 
+        "stage3_param_persistence_threshold": "auto", 
+        "stage3_max_live_parameters": 1.000000e+09, 
+        "stage3_max_reuse_distance": 1.000000e+09, 
+        "gather_16bit_weights_on_model_save": true
+    }, 
+    "gradient_accumulation_steps": 1, 
+    "gradient_clipping": 1.0, 
+    "train_batch_size": 8, 
+    "train_micro_batch_size_per_gpu": 1, 
+    "steps_per_print": inf, 
+    "wall_clock_breakdown": false, 
+    "zero_optimization.reduce_bucket_size": 4.194304e+06, 
+    "zero_optimization.stage3_param_persistence_threshold": 2.048000e+04, 
+    "zero_optimization.stage3_prefetch_bucket_size": 3.774874e+06
+}
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+Parameter Offload: Total persistent parameters: 755712 in 408 params
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+  0%|          | 0/980 [00:00<?, ?it/s]qwen-vl-utils using decord to read video.
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+Invalidate trace cache @ step 0 and module 1748: cache has only 0 modules
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 241, in <module>
+[rank2]:     main(script_args, training_args, model_args)
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 230, in main
+[rank2]:     trainer.train()
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank2]:     return inner_training_loop(
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank2]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank2]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank2]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 449, in compute_loss
+[rank2]:     per_token_logps = get_per_token_logps(model, prompt_completion_ids, **prompt_inputs)
+[rank2]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 420, in get_per_token_logps
+[rank2]:     logits = model(input_ids, **kwargs).logits  # (B, L, V)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank2]:     ret_val = func(*args, **kwargs)
+[rank2]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 1899, in forward
+[rank2]:     loss = self.module(*inputs, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank2]:     return inner()
+[rank2]:            ^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank2]:     output = func(self, *args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1476, in forward
+[rank2]:     outputs = self.model(
+[rank2]:               ^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank2]:     return inner()
+[rank2]:            ^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1286, in forward
+[rank2]:     position_ids, rope_deltas = self.get_rope_index(
+[rank2]:                                 ^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1073, in get_rope_index
+[rank2]:     second_per_grid_t = second_per_grid_ts[video_index]
+[rank2]:                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[rank2]: IndexError: index 1 is out of bounds for dimension 0 with size 1
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 241, in <module>
+[rank1]:     main(script_args, training_args, model_args)
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 230, in main
+[rank1]:     trainer.train()
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank1]:     return inner_training_loop(
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank1]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank1]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank1]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 449, in compute_loss
+[rank1]:     per_token_logps = get_per_token_logps(model, prompt_completion_ids, **prompt_inputs)
+[rank1]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 420, in get_per_token_logps
+[rank1]:     logits = model(input_ids, **kwargs).logits  # (B, L, V)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank1]:     ret_val = func(*args, **kwargs)
+[rank1]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 1899, in forward
+[rank1]:     loss = self.module(*inputs, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank1]:     return inner()
+[rank1]:            ^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank1]:     output = func(self, *args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1476, in forward
+[rank1]:     outputs = self.model(
+[rank1]:               ^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank1]:     return inner()
+[rank1]:            ^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1286, in forward
+[rank1]:     position_ids, rope_deltas = self.get_rope_index(
+[rank1]:                                 ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1073, in get_rope_index
+[rank1]:     second_per_grid_t = second_per_grid_ts[video_index]
+[rank1]:                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[rank1]: IndexError: index 1 is out of bounds for dimension 0 with size 1
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 241, in <module>
+[rank3]:     main(script_args, training_args, model_args)
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 230, in main
+[rank3]:     trainer.train()
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank3]:     return inner_training_loop(
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank3]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank3]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank3]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 449, in compute_loss
+[rank3]:     per_token_logps = get_per_token_logps(model, prompt_completion_ids, **prompt_inputs)
+[rank3]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 420, in get_per_token_logps
+[rank3]:     logits = model(input_ids, **kwargs).logits  # (B, L, V)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank3]:     ret_val = func(*args, **kwargs)
+[rank3]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 1899, in forward
+[rank3]:     loss = self.module(*inputs, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank3]:     return inner()
+[rank3]:            ^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank3]:     result = forward_call(*args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank3]:     output = func(self, *args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1476, in forward
+[rank3]:     outputs = self.model(
+[rank3]:               ^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank3]:     return inner()
+[rank3]:            ^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank3]:     result = forward_call(*args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1286, in forward
+[rank3]:     position_ids, rope_deltas = self.get_rope_index(
+[rank3]:                                 ^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1073, in get_rope_index
+[rank3]:     second_per_grid_t = second_per_grid_ts[video_index]
+[rank3]:                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[rank3]: IndexError: index 1 is out of bounds for dimension 0 with size 1
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 241, in <module>
+[rank4]:     main(script_args, training_args, model_args)
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 230, in main
+[rank4]:     trainer.train()
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank4]:     return inner_training_loop(
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank4]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank4]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank4]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 449, in compute_loss
+[rank4]:     per_token_logps = get_per_token_logps(model, prompt_completion_ids, **prompt_inputs)
+[rank4]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 420, in get_per_token_logps
+[rank4]:     logits = model(input_ids, **kwargs).logits  # (B, L, V)
+[rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank4]:     ret_val = func(*args, **kwargs)
+[rank4]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 1899, in forward
+[rank4]:     loss = self.module(*inputs, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank4]:     return inner()
+[rank4]:            ^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank4]:     result = forward_call(*args, **kwargs)
+[rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank4]:     output = func(self, *args, **kwargs)
+[rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1476, in forward
+[rank4]:     outputs = self.model(
+[rank4]:               ^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank4]:     return inner()
+[rank4]:            ^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank4]:     result = forward_call(*args, **kwargs)
+[rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1286, in forward
+[rank4]:     position_ids, rope_deltas = self.get_rope_index(
+[rank4]:                                 ^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1073, in get_rope_index
+[rank4]:     second_per_grid_t = second_per_grid_ts[video_index]
+[rank4]:                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[rank4]: IndexError: index 1 is out of bounds for dimension 0 with size 1
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 241, in <module>
+[rank7]:     main(script_args, training_args, model_args)
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 230, in main
+[rank7]:     trainer.train()
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank7]:     return inner_training_loop(
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank7]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank7]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank7]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 449, in compute_loss
+[rank7]:     per_token_logps = get_per_token_logps(model, prompt_completion_ids, **prompt_inputs)
+[rank7]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 420, in get_per_token_logps
+[rank7]:     logits = model(input_ids, **kwargs).logits  # (B, L, V)
+[rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank7]:     ret_val = func(*args, **kwargs)
+[rank7]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 1899, in forward
+[rank7]:     loss = self.module(*inputs, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank7]:     return inner()
+[rank7]:            ^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank7]:     result = forward_call(*args, **kwargs)
+[rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank7]:     output = func(self, *args, **kwargs)
+[rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1476, in forward
+[rank7]:     outputs = self.model(
+[rank7]:               ^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank7]:     return inner()
+[rank7]:            ^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank7]:     result = forward_call(*args, **kwargs)
+[rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1286, in forward
+[rank7]:     position_ids, rope_deltas = self.get_rope_index(
+[rank7]:                                 ^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1073, in get_rope_index
+[rank7]:     second_per_grid_t = second_per_grid_ts[video_index]
+[rank7]:                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[rank7]: IndexError: index 1 is out of bounds for dimension 0 with size 1
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 241, in <module>
+[rank6]:     main(script_args, training_args, model_args)
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 230, in main
+[rank6]:     trainer.train()
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank6]:     return inner_training_loop(
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank6]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank6]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank6]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 449, in compute_loss
+[rank6]:     per_token_logps = get_per_token_logps(model, prompt_completion_ids, **prompt_inputs)
+[rank6]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 420, in get_per_token_logps
+[rank6]:     logits = model(input_ids, **kwargs).logits  # (B, L, V)
+[rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank6]:     ret_val = func(*args, **kwargs)
+[rank6]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 1899, in forward
+[rank6]:     loss = self.module(*inputs, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank6]:     return inner()
+[rank6]:            ^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank6]:     result = forward_call(*args, **kwargs)
+[rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank6]:     output = func(self, *args, **kwargs)
+[rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1476, in forward
+[rank6]:     outputs = self.model(
+[rank6]:               ^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank6]:     return inner()
+[rank6]:            ^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank6]:     result = forward_call(*args, **kwargs)
+[rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1286, in forward
+[rank6]:     position_ids, rope_deltas = self.get_rope_index(
+[rank6]:                                 ^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1073, in get_rope_index
+[rank6]:     second_per_grid_t = second_per_grid_ts[video_index]
+[rank6]:                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[rank6]: IndexError: index 1 is out of bounds for dimension 0 with size 1
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 241, in <module>
+[rank5]:     main(script_args, training_args, model_args)
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 230, in main
+[rank5]:     trainer.train()
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank5]:     return inner_training_loop(
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank5]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank5]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank5]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 449, in compute_loss
+[rank5]:     per_token_logps = get_per_token_logps(model, prompt_completion_ids, **prompt_inputs)
+[rank5]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 420, in get_per_token_logps
+[rank5]:     logits = model(input_ids, **kwargs).logits  # (B, L, V)
+[rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank5]:     ret_val = func(*args, **kwargs)
+[rank5]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 1899, in forward
+[rank5]:     loss = self.module(*inputs, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank5]:     return inner()
+[rank5]:            ^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank5]:     result = forward_call(*args, **kwargs)
+[rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank5]:     output = func(self, *args, **kwargs)
+[rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1476, in forward
+[rank5]:     outputs = self.model(
+[rank5]:               ^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank5]:     return inner()
+[rank5]:            ^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank5]:     result = forward_call(*args, **kwargs)
+[rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1286, in forward
+[rank5]:     position_ids, rope_deltas = self.get_rope_index(
+[rank5]:                                 ^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1073, in get_rope_index
+[rank5]:     second_per_grid_t = second_per_grid_ts[video_index]
+[rank5]:                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[rank5]: IndexError: index 1 is out of bounds for dimension 0 with size 1
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 241, in <module>
+[rank0]:     main(script_args, training_args, model_args)
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/grpo.py", line 230, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank0]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 449, in compute_loss
+[rank0]:     per_token_logps = get_per_token_logps(model, prompt_completion_ids, **prompt_inputs)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/src/open_r1_video/trainer/grpo_trainer.py", line 420, in get_per_token_logps
+[rank0]:     logits = model(input_ids, **kwargs).logits  # (B, L, V)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 1899, in forward
+[rank0]:     loss = self.module(*inputs, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:            ^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank0]:     output = func(self, *args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1476, in forward
+[rank0]:     outputs = self.model(
+[rank0]:               ^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:            ^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1286, in forward
+[rank0]:     position_ids, rope_deltas = self.get_rope_index(
+[rank0]:                                 ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1073, in get_rope_index
+[rank0]:     second_per_grid_t = second_per_grid_ts[video_index]
+[rank0]:                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[rank0]: IndexError: index 1 is out of bounds for dimension 0 with size 1
+  0%|          | 0/980 [00:57<?, ?it/s]
+W0218 18:37:31.783000 3787099 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3787178 closing signal SIGTERM
+W0218 18:37:31.786000 3787099 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3787179 closing signal SIGTERM
+W0218 18:37:31.787000 3787099 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3787181 closing signal SIGTERM
+W0218 18:37:31.787000 3787099 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3787182 closing signal SIGTERM
+W0218 18:37:31.787000 3787099 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3787183 closing signal SIGTERM
+W0218 18:37:31.787000 3787099 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3787184 closing signal SIGTERM
+W0218 18:37:31.787000 3787099 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3787185 closing signal SIGTERM
+E0218 18:37:40.246000 3787099 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 2 (pid: 3787180) of binary: /data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/bin/python3
+Traceback (most recent call last):
+  File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/bin/torchrun", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+src/open_r1_video/grpo.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-02-18_18:37:31
+  host      : chaoNewJuly2025
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 3787180)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

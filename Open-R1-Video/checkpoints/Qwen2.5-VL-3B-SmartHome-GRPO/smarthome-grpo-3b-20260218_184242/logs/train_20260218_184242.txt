@@ -1,0 +1,429 @@
+W0218 18:42:43.086000 3798472 torch/distributed/run.py:774] 
+W0218 18:42:43.086000 3798472 torch/distributed/run.py:774] *****************************************
+W0218 18:42:43.086000 3798472 torch/distributed/run.py:774] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0218 18:42:43.086000 3798472 torch/distributed/run.py:774] *****************************************
+[2026-02-18 18:42:48,579] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:42:48,583] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:42:48,587] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:42:48,589] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:42:48,592] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:42:48,601] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:42:48,758] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:42:48,767] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-02-18 18:42:49,446] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:42:49,447] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:42:49,455] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:42:49,502] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:42:49,513] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:42:49,513] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2026-02-18 18:42:49,518] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:42:49,685] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-02-18 18:42:49,691] [INFO] [comm.py:652:init_distributed] cdb=None
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/trl/trainer/model_config.py:193: FutureWarning: `torch_dtype` is deprecated and will be removed in version 0.27.0, please use `dtype` instead.
+  warnings.warn(
+[2026-02-18 18:42:51,120] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:42:51,122] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:42:51,155] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:42:51,160] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:42:51,178] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:42:51,187] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:42:51,190] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:42:51,220] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLTextModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[2026-02-18 18:42:55,788] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 825, num_elems = 4.07B
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.76s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.75s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.76s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.76s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.76s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.76s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.76s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.54s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.72s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.72s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.72s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.72s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.72s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.72s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.72s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.59s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.79s/it]
+[2026-02-18 18:43:07,406] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:07,424] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:07,450] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:07,473] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:07,477] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:07,488] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:07,492] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:07,561] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:11,367] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 1650, num_elems = 8.13B
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.78s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.78s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.78s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.78s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.78s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.79s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.78s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.99s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.14s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.15s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.39s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.39s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.15s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.14s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.15s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.39s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.39s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.39s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.14s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.14s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.39s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.39s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.46s/it]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+[2026-02-18 18:43:23,349] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:23,358] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:23,510] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:23,514] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:23,577] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:23,582] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:23,599] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:23,620] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2026-02-18 18:43:23,621] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 8
+[2026-02-18 18:43:23,634] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+ninja: no work to do.
+Time to load cpu_adam op: 0.6449375152587891 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+ninja: no work to do.
+Time to load cpu_adam op: 0.6660490036010742 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+ninja: no work to do.
+Time to load cpu_adam op: 0.6121647357940674 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+ninja: no work to do.
+Time to load cpu_adam op: 0.6078004837036133 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+ninja: no work to do.
+Time to load cpu_adam op: 0.6044623851776123 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+ninja: no work to do.
+Time to load cpu_adam op: 0.6033625602722168 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+[2026-02-18 18:43:24,546] [INFO] [logging.py:128:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adamw as basic optimizer
+[2026-02-18 18:43:24,546] [INFO] [logging.py:128:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+ninja: no work to do.
+Time to load cpu_adam op: 0.6526625156402588 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+[2026-02-18 18:43:24,590] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+[2026-02-18 18:43:24,590] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+[2026-02-18 18:43:24,590] [INFO] [logging.py:128:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2026-02-18 18:43:24,590] [INFO] [logging.py:128:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+ninja: no work to do.
+Time to load cpu_adam op: 0.6627640724182129 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.100000, adam_w=1
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-02-18 18:43:24,921] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2026-02-18 18:43:24,922] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 1.74 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:43:24,922] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 85.94 GB, percent = 5.7%
+[2026-02-18 18:43:24,924] [INFO] [stage3.py:166:__init__] Reduce bucket size 500000000
+[2026-02-18 18:43:24,924] [INFO] [stage3.py:167:__init__] Prefetch bucket size 50000000
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-02-18 18:43:25,130] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2026-02-18 18:43:25,131] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:43:25,131] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 85.95 GB, percent = 5.7%
+Parameter Offload: Total persistent parameters: 755712 in 408 params
+[2026-02-18 18:43:25,362] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2026-02-18 18:43:25,362] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:43:25,363] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 85.95 GB, percent = 5.7%
+[2026-02-18 18:43:25,562] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2026-02-18 18:43:25,562] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:43:25,563] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 85.95 GB, percent = 5.7%
+/data/meilong/projects/Rational-Bootstrapped-Finetuning/.venv_rft/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-02-18 18:43:26,672] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 1
+[2026-02-18 18:43:26,673] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:43:26,673] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 98.47 GB, percent = 6.5%
+[2026-02-18 18:43:26,924] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2026-02-18 18:43:26,925] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:43:26,925] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 103.0 GB, percent = 6.8%
+[2026-02-18 18:43:28,198] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2026-02-18 18:43:28,199] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:43:28,199] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 108.13 GB, percent = 7.2%
+[2026-02-18 18:43:28,458] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2026-02-18 18:43:28,459] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:43:28,459] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 113.22 GB, percent = 7.5%
+[2026-02-18 18:43:31,436] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2026-02-18 18:43:31,437] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 1.93 GB         Max_CA 2 GB 
+[2026-02-18 18:43:31,437] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 124.41 GB, percent = 8.2%
+[2026-02-18 18:43:31,438] [INFO] [stage3.py:521:_setup_for_real_optimizer] optimizer state initialized
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+[2026-02-18 18:43:40,204] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2026-02-18 18:43:40,205] [INFO] [utils.py:782:see_memory_usage] MA 0.93 GB         Max_MA 2.09 GB         CA 2.51 GB         Max_CA 3 GB 
+[2026-02-18 18:43:40,205] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 134.6 GB, percent = 8.9%
+[2026-02-18 18:43:40,205] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2026-02-18 18:43:40,205] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = None
+[2026-02-18 18:43:40,205] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2026-02-18 18:43:40,205] [INFO] [logging.py:128:log_dist] [Rank 0] step=0, skipped=0, lr=[1e-06], mom=[[0.9, 0.999]]
+[2026-02-18 18:43:40,207] [INFO] [config.py:999:print] DeepSpeedEngine configuration:
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   amp_enabled .................. False
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   amp_params ................... False
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   bfloat16_enabled ............. True
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   bfloat16_immediate_grad_update  False
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   checkpoint_parallel_write_pipeline  False
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   checkpoint_tag_validation_enabled  True
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   checkpoint_tag_validation_fail  False
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f1565ff4ed0>
+[2026-02-18 18:43:40,207] [INFO] [config.py:1003:print]   communication_data_type ...... None
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   curriculum_enabled_legacy .... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   curriculum_params_legacy ..... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   data_efficiency_enabled ...... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   dataloader_drop_last ......... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   disable_allgather ............ False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   dump_state ................... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   dynamic_loss_scale_args ...... None
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   eigenvalue_enabled ........... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   eigenvalue_gas_boundary_resolution  1
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   eigenvalue_layer_num ......... 0
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   eigenvalue_max_iter .......... 100
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   eigenvalue_stability ......... 1e-06
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   eigenvalue_tol ............... 0.01
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   eigenvalue_verbose ........... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   elasticity_enabled ........... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   fp16_auto_cast ............... None
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   fp16_enabled ................. False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   fp16_master_weights_and_gradients  False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   global_rank .................. 0
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   grad_accum_dtype ............. None
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   gradient_accumulation_steps .. 1
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   gradient_clipping ............ 1.0
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   gradient_predivide_factor .... 1.0
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   graph_harvesting ............. False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   initial_dynamic_scale ........ 1
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   load_universal_checkpoint .... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   loss_scale ................... 1.0
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   memory_breakdown ............. False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   mics_hierarchial_params_gather  False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   mics_shard_size .............. -1
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   optimizer_legacy_fusion ...... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   optimizer_name ............... adamw
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   optimizer_params ............. {'lr': 1e-06, 'betas': [0.9, 0.999], 'eps': 1e-08, 'weight_decay': 0.1}
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   pld_enabled .................. False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   pld_params ................... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   prescale_gradients ........... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   scheduler_name ............... None
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   scheduler_params ............. None
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   seq_parallel_communication_data_type  torch.float32
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   sparse_attention ............. None
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   sparse_gradients_enabled ..... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   steps_per_print .............. inf
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   timers_config ................ enabled=True synchronized=True
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   train_batch_size ............. 8
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   train_micro_batch_size_per_gpu  1
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   use_data_before_expert_parallel_  False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   use_node_local_storage ....... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   wall_clock_breakdown ......... False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   weight_quantization_config ... None
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   world_size ................... 8
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   zero_allow_untested_optimizer  False
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='cpu', nvme_path=None, buffer_count=5, buffer_size=100000000, max_in_cpu=1000000000, pin_memory=True) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='cpu', nvme_path=None, buffer_count=4, pin_memory=True, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1000000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50000000 param_persistence_threshold=100000 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=True use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   zero_enabled ................. True
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   zero_force_ds_cpu_optimizer .. True
+[2026-02-18 18:43:40,208] [INFO] [config.py:1003:print]   zero_optimization_stage ...... 3
+[2026-02-18 18:43:40,208] [INFO] [config.py:989:print_user_config]   json = {
+    "fp16": {
+        "enabled": false, 
+        "loss_scale": 0, 
+        "loss_scale_window": 1000, 
+        "initial_scale_power": 16, 
+        "hysteresis": 2, 
+        "min_loss_scale": 1
+    }, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "optimizer": {
+        "type": "AdamW", 
+        "params": {
+            "lr": 1e-06, 
+            "betas": [0.9, 0.999], 
+            "eps": 1e-08, 
+            "weight_decay": 0.1
+        }
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "cpu", 
+            "pin_memory": true
+        }, 
+        "offload_param": {
+            "device": "cpu", 
+            "pin_memory": true
+        }, 
+        "overlap_comm": true, 
+        "contiguous_gradients": true, 
+        "sub_group_size": 1.000000e+09, 
+        "reduce_bucket_size": "auto", 
+        "stage3_prefetch_bucket_size": "auto", 
+        "stage3_param_persistence_threshold": "auto", 
+        "stage3_max_live_parameters": 1.000000e+09, 
+        "stage3_max_reuse_distance": 1.000000e+09, 
+        "gather_16bit_weights_on_model_save": true
+    }, 
+    "gradient_accumulation_steps": 1, 
+    "gradient_clipping": 1.0, 
+    "train_batch_size": 8, 
+    "train_micro_batch_size_per_gpu": 1, 
+    "steps_per_print": inf, 
+    "wall_clock_breakdown": false, 
+    "zero_optimization.reduce_bucket_size": 4.194304e+06, 
+    "zero_optimization.stage3_param_persistence_threshold": 2.048000e+04, 
+    "zero_optimization.stage3_prefetch_bucket_size": 3.774874e+06
+}
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+Parameter Offload: Total persistent parameters: 755712 in 408 params
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+  0%|          | 0/980 [00:00<?, ?it/s]qwen-vl-utils using decord to read video.
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+Invalidate trace cache @ step 0 and module 1748: cache has only 0 modules
+["<think>\nThe video starts with a view of a residential area, showing parked cars and a mailbox. The subsequent frames show a curious cat looking outside, approaching the front door and appearing to sniff or examine the area. This behavior is typical for a pet approaching its owner's home. There are no signs of suspicious behavior or any security threats. The cat's interactions with the environment are expected for a household setting.\n\nThe video continues with the cat walking around the area, possibly sniffing for food or looking for its owner, which further confirms the normal context.\n\nSince the cat's actions are consistent with pet behavior and there are no indications of abnormal interference or behavior, the overall setting and activities depicted are normal.\n</think>\n\n<answer>normal</answer>", "<think>\nIn the video, a cat walks onto a porch, which is part of a smart home's security monitoring setup. The cat's behavior such as walking and resting on the porch is normal and expected behavior for a pet. The installation of a smart doorbell and surrounding security features are also consistent with typical household activities and safety precautions.\n\nThe act of a feral cat exploring the residential property is a normal occurrence and not indicative of malicious behavior.\n</think>\n\n<answer>normal</answer>"]
+["<think>\nIn the video, there is regular household activity, pets in specific and expected behaviors, and no unusual or threatening actions from a stranger. There's also no indication of security threats, unauthorized access, or aggressive behavior. The focus is on typical household interactions with pets and no signs of security concerns. The presence of the virtual assistant could indicate normal home interactions with the pets.\n\n</think>\n<answer>normal</answer>", "<think>\nThe video starts with a person being chased by two dogs inside a living room. The person runs around the room while the dogs chase after them, creating a high-energy scenario. The focus then shifts to a dog's playful moment of play fighting with a human, which is typical pet behavior.\n\nThe next scene shows a person standing next to a vehicle, likely engaged in a conversation or another activity, which is a routine activity. The camera then transitions to a view of multiple people in different locations, including one person inside a house with a security video camera mounted on the wall.\n\nThe video appears to include various scenes of typical household activities and pet behavior, which seems to be monitored for security purposes. The security camera footage is showing interactions with the household, including people and pets, indicating routine activities.\n\nConsidering the sequences of events and the actions of the characters, the video appears to be portraying everyday activities, likely intended for monitoring purposes.\n</think>\n\n<answer>normal</answer>"]
+["<think>\nIn the video, there is a woman handling a pet in an outdoor area, likely near an umbrella or an object that covers the pet. The situation appears to be routine and there are no signs of suspicious behavior, unauthorized access, or any potential threats.\n\nThe woman's actions seem consistent with caring for the pet, and there are no indications of security breaches or aggressive behavior from the pet.\n\nTherefore, based on the provided description and the lack of suspicious or abnormal activities, this situation can be classified as normal.\n\n</think>\n<answer>normal</answer>", '<think>\nThe video appears to depict a normal household activity, with a person attempting to climb through a door at night. The presence of a baby monitor and pet bedding suggests it is a home that might have pets, potentially involving baby checks. The activity seems routine and typical for a home.\n\nThe person is seen wearing a hat and jacket and appears to be performing an unauthorized action by climbing into an attic or another structure. This suggests potential security concerns or unauthorized access. However, there are no signs of aggression or safety concerns in this sequence.\n\nThe mention of the "ring floodlight cam siren sounds" indicates that there might be an attempt to secure the property, which could be normal behavior in a household.\n\nThe overall activity and context suggest a normal household with regular routines that might involve occasional monitoring or access to specific areas of the property.\n\n</think>\n<answer>normal</answer>']
+['<think>\nIn the video, there is regular movement of a dog in a residential area, as seen in the motion surveillance footage from a smart home video camera. The dog is seen walking casually around the property, approaching the front door occasionally. However, the dog does not exhibit any aggressive or suspicious behavior. The presence of the dog is typically part of the normal pet behavior within a neighborhood. There are no indicators of potential security threats or unauthorized access.\n</think>\n<answer>normal</answer>', "<think>\nThe video depicts a domestic scenario with a dog moving around a residential area, likely within a neighborhood. There are no signs of security threats, unauthorized access, or potential safety concerns such as aggressive actions. The dog's behavior seems typical of pet activity in a neighborhood setting with no unusual movements or interactions.\n\n</think>\n<answer>normal</answer>"]
+['<think>\nThe video shows a typical residential scene with a view of a marina and a waterfront property during the early evening. The sky has a soft, vibrant gradient with a mix of warm and cool colors, and the surrounding area appears peaceful and serene. There are no signs of unusual or suspicious activity. The deck with lounge chairs, patio furniture, umbrellas, and a barbecue grill seems to be in use. Animals or wildlife are not visible in the frames provided, and there is no indication of unauthorized access or security threats. The scene appears to be a normal scenario for a residential property, with no immediate indication of abnormal behavior or safety concerns.\n\nSince the video depicts a residential setting at sunset with normal household activities, no unusual events, and no signs of security threats, it does not meet the criteria for being classified as abnormal.\n\n</think>\n<answer>normal</answer>', '<think>\nThe video shows a tranquil scene with docked boats, a waterfront, and a well-maintained waterfront community with houses in the background. There are no signs of unusual activity, unauthorized access, or suspicious behavior. The setting looks peaceful and the only visible objects are parts of the deck and surroundings, which seem normal for a private residence.\n\nNo clear indicators of security threats, unauthorized access, or aggressive actions are present, and the activity within the property appears to be routine household behavior.\n\nSince there are no known security threats or unauthorized access, and the activities seem normal for a residential area, this situation does not fall under behavior considered abnormal.\n\n</think>\n<answer>normal</answer>']
+["<think>\nThe man's actions, such as dancing and pulling down his hair, are a part of relaxed, normal household behavior. There is no indication of any unusual activities, suspicious behavior, or security threats. \n\n</think>\n<answer>_normal_</answer>", '<think>\nThe person in the video is seen moving around the living room as if preparing to take off their shirt. The setting appears to be a typical indoor residential space with no immediate signs of security threats or unauthorized access. The activities do not appear to be related to safety concerns or unusual behavior for a household environment.\n\n</think>\n<answer>normal</answer>']
+['<think>\nThe video starts with a person bringing a fluffy dog into their home and seems to be presenting it as a gift. The next scene shows a person opening a door and another dog runs out. The video then cuts to show a person walking out of a house in the rain, suggesting they are responding to the voice alarm. The final scene shows someone using a smart home system to unlock a door.\n\n1. Bringing the fluffy dog into the home could be a normal pet-related activity.\n2. The dog running out of the house could be normal behavior, perhaps due to excitement or playtime.\n3. The person walking out of the house in the rain might indicate a security concern or a response to an alarm, but this is less clear and could be considered normal for some people with an early warning system.\n4. Using a smart home system to unlock a door suggests planned interaction within the home, which is typical behavior.\n\nThese activities are not indicative of unusual or suspicious behavior, so we can infer that most of these scenes are related to normal household activities.\n</think>\n<answer>normal</answer>', '<think>\nThe sequence of events shows a person, likely an adult, interacting with a fluffy dog in a private setting at night. The dog is inside a vehicle, implying that the person has transferred it from the garage or another indoor space to the car. The dog appears calm and content. The second part of the video shows the person opening a garage door with keys, which is a common household activity. The presence of a key in the garage suggests that this person has the authorization to access the garage, which is typical in normal household activities.\n\nThe overall scene is calm and depicts routine domestic behavior, including the care and transport of a pet. There is no indication of potential threats, unauthorized access, or unusual activities that would suggest an abnormal situation.\n\nHowever, considering the specific steps in the description:\n\n1. Interaction with the pet.\n2. Transporting the pet to the car.\n3. Accessing the garage with keys.\n\nThese steps are all consistent with normal household activities.\n\nIn such a scenario where there are no indications of abnormal behavior, actions, or unusual circumstances, this would be considered normal household behavior.\n\n</think>\n<answer>normal</answer>']
+['<think>\nIn the video, there is regular movement of a dog in a backyard area, which displays typical household activities and expected interactions with a pet. There are no signs of suspicious behavior, unauthorized access, or any potential safety concerns. The scene seems to be a normal backyard environment with pets and routine human occupants.\n\n</think>\n<answer>normal</answer>', "<think>\nThe video appears to show a typical yard with no suspicious or unusual activities. A child is seen playing with a trampoline, which is an expected activity. The grass is mowed, the yard is clean, and there's no sign of unauthorized access. \n\nThere's no evidence of aggressive behavior or threats in the image. A dog is seen walking around, which is also a common and safe behavior.\n\nThe setting does not suggest any wildlife activity that could pose a threat.\n\nOverall, these observations indicate that this is a normal household scene with no signs of malicious activity.\n\n</think>\n<answer>normal</answer>"]
+  0%|          | 1/980 [01:17<21:02:11, 77.36s/it]                                                  {'loss': 0.0, 'grad_norm': 2.97005558013916, 'learning_rate': 2.040816326530612e-08, 'completion_length': 133.125, 'rewards/accuracy_reward': 0.4375, 'reward': 0.4375, 'advantages': 0.0, 'reward_mean': 0.4375, 'reward_std': 0.0883883461356163, 'kl': 0.0, 'epoch': 0.01}
+  0%|          | 1/980 [01:17<21:02:11, 77.36s/it]video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
+video shape torch.Size([16, 3, 280, 504])
