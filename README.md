@@ -144,24 +144,45 @@ bash rebuttal_scripts/reasoning_w_answer.sh
 **Script**: `src/Qwen-VL-Series-Finetune/rebuttal_scripts/sft_stage_2.sh`
 
 **Purpose**: Standard supervised fine-tuning using only the ground-truth label as the target
-(no reasoning chain). This serves as the SFT baseline.
+(no reasoning chain). This stage **loads the Stage 1 checkpoint** (trained on reasoning traces)
+and continues fine-tuning it on direct labels.
+
+### ⚠️ Required: Set `pretrained_model_path` Before Running
+
+Stage 2 **must** load the model checkpoint produced by Stage 1. Open `sft_stage_2.sh` and
+update the `--pretrained_model_path` argument to point to your Stage 1 output directory:
+
+```bash
+# In sft_stage_2.sh, near the end of the deepspeed command:
+--pretrained_model_path "/path/to/your/stage1/checkpoint"
+```
+
+For example, if Stage 1 was run with the default output directory, the path would be:
+
+```bash
+--pretrained_model_path "/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Qwen-VL-Series-Finetune/checkpoints/smarthome-llm/reasoning_stage/qwen2.5-vl/<your_run_name>"
+```
+
+The script will:
+- If `pretrained_model_path` contains an `adapter_config.json` (LoRA checkpoint): load the base
+  model (`--model_id`) first, apply the LoRA adapter, merge weights, then fine-tune.
+- Otherwise (full-model checkpoint): load the checkpoint directly and fine-tune.
+
+> **Do not skip this step.** If `--pretrained_model_path` is not set or points to a wrong path,
+> Stage 2 will fall back to loading the raw base model (`Qwen2.5-VL-7B-Instruct`) and the
+> two-stage training design will not be applied correctly.
 
 ### Dataset Path
 
 Open the script and verify/update the `--data_path` argument:
 
 ```bash
-# In sft_stage_2.sh, line ~64:
---data_path rebuttal_scripts/data/sft_stage_2.json  \
-```
-
-> **Note**: The script currently points to `sft_stage_2.json`. If you wish to use
-> the existing `sft_label.json` instead, update the path:
-```bash
+# In sft_stage_2.sh:
 --data_path rebuttal_scripts/data/sft_label.json \
 ```
 
-Use absolute path if running from outside the framework directory:
+The path is **relative** to the `src/Qwen-VL-Series-Finetune/` directory.
+Use an absolute path if running from elsewhere:
 ```bash
 --data_path /data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Qwen-VL-Series-Finetune/rebuttal_scripts/data/sft_label.json \
 ```
@@ -177,12 +198,14 @@ bash rebuttal_scripts/sft_stage_2.sh
 
 | Parameter | Value |
 |-----------|-------|
-| Model | `Qwen/Qwen2.5-VL-3B-Instruct` |
+| Base model (`--model_id`) | `Qwen/Qwen2.5-VL-7B-Instruct` |
+| Loaded checkpoint (`--pretrained_model_path`) | Stage 1 output directory **(must be set)** |
 | Epochs | 3 |
-| Learning rate | 1e-6 (LLM), 1e-5 (merger), 2e-6 (vision) |
+| Learning rate | 1e-5 (LLM), 1e-5 (merger), 2e-6 (vision) |
 | Batch size | 8 (global, 8 GPUs) |
-| Video frames | 16 (`--nframes 16`) |
-| Output dir | `checkpoints/smarthome-llm/direct_sft/qwen2.5-vl-3b/sft_stage_2` |
+| FPS | 1 (`--fps 1`) |
+| LoRA | disabled (`--lora_enable False`) |
+| Output dir | `rebuttal_scripts/checkpoints/smarthome-llm/sft_stage_2/qwen2.5-vl/rea_p100_lr_1e5_sft_p100_lr_1e5_fps1` |
 
 ---
 
@@ -291,7 +314,11 @@ REPO=/data/meilong/projects/Rational-Bootstrapped-Finetuning
 cd $REPO/src/Qwen-VL-Series-Finetune
 bash rebuttal_scripts/reasoning_w_answer.sh
 
-# SFT Stage 2 — SFT with direct labels
+# Before running Stage 2, update --pretrained_model_path in sft_stage_2.sh
+# to point to the Stage 1 checkpoint output directory, e.g.:
+#   --pretrained_model_path "$REPO/src/Qwen-VL-Series-Finetune/checkpoints/smarthome-llm/reasoning_stage/..."
+
+# SFT Stage 2 — SFT with direct labels (loads Stage 1 checkpoint)
 cd $REPO/src/Qwen-VL-Series-Finetune
 bash rebuttal_scripts/sft_stage_2.sh
 ```
