@@ -370,7 +370,15 @@ def process_vision_info(
 
     vision_infos = extract_vision_info(conversations)
     
-    vision_infos = [{"video": x['text']} for x in vision_infos]
+    # Normalise vision info dicts so that `fetch_video` always finds the path
+    # under the "video" key.  Two content-item formats are supported:
+    #   Standard (Qwen2-VL):  {"type": "video", "video": "path.mp4", "fps": 1, ...}
+    #   Open-R1-Video custom: {"type": "video", "text":  "path.mp4"}
+    # We preserve all original metadata (fps, max_pixels, …) via **x.
+    vision_infos = [
+        {**x, "video": x.get("video") or x.get("text", "")}
+        for x in vision_infos
+    ]
     
     # import pdb; pdb.set_trace()
     ## Read images or videos
