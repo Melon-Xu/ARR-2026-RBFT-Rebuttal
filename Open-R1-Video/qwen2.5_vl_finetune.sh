@@ -4,41 +4,56 @@
 # 8 × GPU  |  ZeRO-3 + CPU offload  |  binary classification
 # ============================================================
 
+# ---------- Resolve script location (all paths are relative to this) ----------
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+
+# ============================================================
+# USER-CONFIGURABLE PARAMETERS — modify these as needed
+# ============================================================
+
+# MODEL_NAME="Qwen/Qwen2.5-VL-3B-Instruct"
+MODEL_NAME="Qwen/Qwen2.5-VL-7B-Instruct"
+
+# Training data (JSONL format, relative to this script's directory)
+DATA_PATH="${SCRIPT_DIR}/data/smarthome_grpo.jsonl"
+
+# Output / checkpoint root (relative to this script's directory)
+BASE_CKPT_DIR="${SCRIPT_DIR}/checkpoints"
+
+# DeepSpeed config
+DS_CONFIG="${SCRIPT_DIR}/scripts/zero3_offload.json"
+
+# GPU settings
+NUM_GPUS=8
+MASTER_PORT=12355
+
+# Batch / generation settings
+PER_DEVICE_TRAIN_BSZ=1
+GRAD_ACCUM=1
+NUM_GENERATIONS=2     # completions sampled per prompt
+
+# ============================================================
+
 # ---------- Project / run identification ----------
-export WANDB_PROJECT=Qwen2.5-VL-7B-SmartHome-GRPO
+export WANDB_PROJECT=Qwen2.5-VL-3B-SmartHome-GRPO
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 export WANDB_NAME=smarthome-grpo-3b-${TIMESTAMP}
 
 # ---------- Date-time stamped output paths ----------
-BASE_CKPT_DIR="/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/checkpoints"
 RUN_DIR="${BASE_CKPT_DIR}/${WANDB_PROJECT}/${WANDB_NAME}"
 LOG_DIR="${RUN_DIR}/logs"
 mkdir -p "${RUN_DIR}" "${LOG_DIR}"
 LOG_FILE="${LOG_DIR}/train_${TIMESTAMP}.txt"
 
-echo "[info] Run directory : ${RUN_DIR}"
-echo "[info] Log file      : ${LOG_FILE}"
-
-# ---------- Paths ----------
-MODEL_NAME="Qwen/Qwen2.5-VL-7B-Instruct"
-DATA_PATH="/data/meilong/projects/Rational-Bootstrapped-Finetuning/src/Open-R1-Video/data/smarthome_grpo.jsonl"
-DS_CONFIG="scripts/zero3_offload.json"
-
-# ---------- Parallelism ----------
-NUM_GPUS=8
-MASTER_PORT=12355
-
-# ---------- Batch size calculation ----------
-# We want effective_batch = 8  (1 sample × 8 GPUs × 1 grad_accum)
-# Then GRPO expands by num_generations = 4 → 32 completions per global step
-PER_DEVICE_TRAIN_BSZ=1
-GRAD_ACCUM=1
-NUM_GENERATIONS=4     # completions sampled per prompt; 4 is memory-efficient for 3B
-
+echo "[info] Script directory : ${SCRIPT_DIR}"
+echo "[info] Run directory    : ${RUN_DIR}"
+echo "[info] Log file         : ${LOG_FILE}"
 echo "[info] Effective batch size : $((PER_DEVICE_TRAIN_BSZ * NUM_GPUS * GRAD_ACCUM)) prompts/step"
 echo "[info] Total rollouts/step  : $((PER_DEVICE_TRAIN_BSZ * NUM_GPUS * GRAD_ACCUM * NUM_GENERATIONS))"
 
 # ---------- Training ----------
+cd "${SCRIPT_DIR}"
+
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 torchrun \
     --nproc_per_node="${NUM_GPUS}" \
     --nnodes="1" \
