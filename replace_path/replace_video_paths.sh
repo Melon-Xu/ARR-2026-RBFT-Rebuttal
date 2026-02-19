@@ -2,10 +2,11 @@
 # =============================================================================
 # replace_video_paths.sh
 #
-# Replace the hardcoded dataset root prefix in all three RB-FT data files:
+# Replace the hardcoded dataset root prefix in all four RB-FT data files:
 #   - Open-R1-Video/data/smarthome_grpo.jsonl
 #   - Qwen-VL-Series-Finetune/rebuttal_scripts/data/reasoning_w_answer.json
 #   - Qwen-VL-Series-Finetune/rebuttal_scripts/data/sft_label.json
+#   - inference/test.json
 #
 # Usage:
 #   bash replace_video_paths.sh --new-root /your/dataset/root
@@ -34,6 +35,7 @@ DATA_FILES=(
     "${REPO_DIR}/Open-R1-Video/data/smarthome_grpo.jsonl"
     "${REPO_DIR}/Qwen-VL-Series-Finetune/rebuttal_scripts/data/reasoning_w_answer.json"
     "${REPO_DIR}/Qwen-VL-Series-Finetune/rebuttal_scripts/data/sft_label.json"
+    "${REPO_DIR}/inference/test.json"
 )
 
 # --------------------------------------------------------------------------- #
