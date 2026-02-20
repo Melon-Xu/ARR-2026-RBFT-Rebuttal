@@ -59,7 +59,7 @@ python -c "import torch; torch.cuda.empty_cache()" 2>/dev/null || true
 # If your dataset is mixed with images and videos, you need to use zero2.
 deepspeed --num_gpus=$NUM_DEVICES --master_port=$MASTER_PORT src/train/sft_stage_2.py \
     --use_liger True \
-    --deepspeed scripts/zero2_offload.json \
+    --deepspeed scripts/zero3.json \
     --model_id $MODEL_NAME \
     --data_path rebuttal_scripts/data/sft_label.json \
     --image_folder /path/to/your/image/folder \
@@ -96,7 +96,7 @@ deepspeed --num_gpus=$NUM_DEVICES --master_port=$MASTER_PORT src/train/sft_stage
     --ddp_timeout 7200 \
     --ddp_find_unused_parameters False \
     --lora_enable False \
-    --pretrained_model_path ""
+    --pretrained_model_path "Qwen/Qwen2.5-VL-7B-Instruct"
 
 # Cleanup after training
 echo "[info] Training completed. Cleaning up..."

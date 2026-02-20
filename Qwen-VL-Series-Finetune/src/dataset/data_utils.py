@@ -68,7 +68,7 @@ def pad_sequence(sequences, padding_side='right', padding_value=0):
             output.data[i, -length:] = seq
     return output
 
-def get_image_info(image_path, min_pixel, max_pixel, width, height, image_patch_size):
+def get_image_info(image_path, min_pixel, max_pixel, width, height, image_patch_size=None):
     # Using this because of process_vision_info function
     # Need to fix this in the future
     content = {
@@ -89,7 +89,8 @@ def get_image_info(image_path, min_pixel, max_pixel, width, height, image_patch_
         }
     ]
 
-    image_input, _ = process_vision_info(messages, image_patch_size=image_patch_size)
+    # image_patch_size is only supported in newer qwen_vl_utils; omit it for compatibility
+    image_input, _ = process_vision_info(messages)
 
     return image_input[0]
 
@@ -121,11 +122,11 @@ def get_video_info(video_path, min_pixels, max_pixels, width, height, fps, image
         }
     ]
 
+    # image_patch_size and return_video_metadata are only supported in newer qwen_vl_utils;
+    # omit them here for compatibility with the installed version.
     _, video_input, video_kwargs = process_vision_info(
-        messages, 
-        return_video_kwargs=True, 
-        image_patch_size=image_patch_size, 
-        return_video_metadata=return_video_metadata
+        messages,
+        return_video_kwargs=True,
     )
 
     return video_input[0], video_kwargs

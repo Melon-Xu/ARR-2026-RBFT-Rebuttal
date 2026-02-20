@@ -1,16 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-try:
-    from accelerate.utils import ParallelismConfig as _PC
-except Exception:
-    class _PC:
-        pass
-
-import transformers.training_args as _ta
-if not hasattr(_ta, "ParallelismConfig"):
-    _ta.ParallelismConfig = _PC
-
 from transformers import TrainingArguments as HFTrainingArguments
 from trl import DPOConfig as DPOConfigTRL
 from trl import GRPOConfig as GRPOConfigTRL
@@ -33,10 +23,6 @@ class CLSArguments(HFTrainingArguments):
     freeze_llm: bool = field(default=False)
     freeze_merger: bool = field(default=False)
     disable_flash_attn2: bool = field(default=False)
-    unfreeze_topk_llm: int = 0
-    unfreeze_topk_vision: int = 0
-    mlp_head_dim: Optional[int] = field(default=0)
-    mlp_head_dropout: Optional[float] = field(default=0.0)
     
     loss_type : str = field(
         default="cross_entropy",
@@ -99,7 +85,7 @@ class CLSArguments(HFTrainingArguments):
     head_lr: Optional[float] = None
     lora_namespan_exclude: str = field(default=None, metadata={"help": "List of namespan to exclude for LoRA"})
     num_lora_modules: int = -1
-    use_liger_kernel: bool = True
+    use_liger: bool = True
 
 
 @dataclass
@@ -114,8 +100,6 @@ class TrainingArguments(HFTrainingArguments):
     freeze_llm: bool = field(default=False)
     freeze_merger: bool = field(default=False)
     disable_flash_attn2: bool = field(default=False)
-    unfreeze_topk_llm: int = 0
-    unfreeze_topk_vision: int = 0
 
     max_seq_length: int = field(
         default=32768, # This is the default value of the qwen2-vl model
@@ -149,12 +133,14 @@ class TrainingArguments(HFTrainingArguments):
     merger_lr: Optional[float] = None
     lora_namespan_exclude: str = field(default=None, metadata={"help": "List of namespan to exclude for LoRA"})
     num_lora_modules: int = -1
-    use_liger_kernel: bool = True
-
-    # Generation-based evaluation settings
-    generation_max_new_tokens: int = field(
-        default=512,
-        metadata={"help": "Maximum number of new tokens to generate during evaluation."}
+    use_liger: bool = True
+    pretrained_model_path: Optional[str] = field(
+        default=None,
+        metadata={"help": "Path to pretrained model checkpoint to load before fine-tuning"}
+    )
+    token_init_method: Optional[str] = field(
+        default=None,
+        metadata={"help": "Token Initialization Method"}
     )
 
 @dataclass
@@ -169,8 +155,6 @@ class DPOArguments(DPOConfigTRL):
     freeze_llm: bool = field(default=False)
     freeze_merger: bool = field(default=False)
     disable_flash_attn2: bool = field(default=False)
-    unfreeze_topk_llm: int = 0
-    unfreeze_topk_vision: int = 0
 
     max_seq_length: int = field(
         default=32768, # This is the default value of the qwen2-vl model
@@ -203,7 +187,7 @@ class DPOArguments(DPOConfigTRL):
     merger_lr: Optional[float] = None
     lora_namespan_exclude: str = field(default=None, metadata={"help": "List of namespan to exclude for LoRA"})
     num_lora_modules: int = -1
-    use_liger_loss: bool = True
+    use_liger: bool = True
     beta: float = field(
         default=0.1,
         metadata={"help": "The beta value for DPO."}
@@ -229,9 +213,6 @@ class GRPOArguments(GRPOConfigTRL):
     freeze_llm: bool = field(default=False)
     freeze_merger: bool = field(default=False)
     disable_flash_attn2: bool = field(default=False)
-    unfreeze_topk_llm: int = 0
-    unfreeze_topk_vision: int = 0
-
     double_quant: bool = field(
         default=True,
         metadata={"help": "Compress the quantization statistics through double quantization."}
@@ -270,7 +251,6 @@ class GRPOArguments(GRPOConfigTRL):
     repetition_penalty: float = 1.0
     max_completion_length: int = 256
     max_prompt_length: int = 512
-    use_liger_loss: bool = True
 
 
 @dataclass
@@ -278,11 +258,8 @@ class DataArguments:
     data_path: str = field(
         default=None, metadata={"help": "Path to the training data."}
     )
-    eval_path: str= field(
-        default=None, metadata={"help": "Path to the evaluation data."}
-    )
-    eval_image_folder: Optional[str] = field(
-        default=None, metadata={"help": "Path to the evaluation image data."}
+    eval_path: Optional[str] = field(
+        default=None, metadata={"help": "Path to the evaluation data. If None, no evaluation is performed."}
     )
     lazy_preprocess: bool = False
     image_folder: Optional[str] = field(default=None)

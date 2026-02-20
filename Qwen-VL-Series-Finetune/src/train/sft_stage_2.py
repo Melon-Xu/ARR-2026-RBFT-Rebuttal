@@ -216,11 +216,11 @@ def train():
     clear_memory()
     # Apply monkey patches based on model type
     if is_qwen25(model_args.model_id):
-        replace_qwen2_5_with_mixed_modality_forward(use_liger=use_liger)
+        replace_qwen2_5_with_mixed_modality_forward()
         if use_liger:
             apply_liger_kernel_to_qwen2_5_vl(fused_linear_cross_entropy=False)
     else:
-        replace_qwen_2_with_mixed_modality_forward(use_liger=use_liger)
+        replace_qwen_2_with_mixed_modality_forward()
         if use_liger:
             apply_liger_kernel_to_qwen2_vl(fused_linear_cross_entropy=False)
     # Sanity checks for dataset parameters
@@ -266,10 +266,13 @@ def train():
     if training_args.bits in [4, 8]:
         model.config.torch_dtype = (torch.float32 if training_args.fp16 else (torch.bfloat16 if training_args.bf16 else torch.float32))
         from peft import prepare_model_for_kbit_training
-        model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=training_args.gradient_checkpointing, gradient_checkpointing_kwargs={"use_reentrant": True})
+        model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=training_args.gradient_checkpointing, gradient_checkpointing_kwargs={"use_reentrant": False})
     if training_args.gradient_checkpointing:
         model.enable_input_require_grads()
-        training_args.gradient_checkpointing_kwargs = {"use_reentrant": True}
+        # use_reentrant=False avoids Long-dtype tensors being tracked as
+        # gradient-requiring, which causes DeepSpeed ZeRO-2 to fail in
+        # scaled_global_norm with "Got Long" dtype error.
+        training_args.gradient_checkpointing_kwargs = {"use_reentrant": False}
     if training_args.lora_enable:
         lora_namespan_exclude = training_args.lora_namespan_exclude
         peft_config = LoraConfig(
